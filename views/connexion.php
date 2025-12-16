@@ -32,7 +32,7 @@
         </form>
 
         <!-- Bouton inscription -->
-        <form action="./views/inscription.php" method="POST">
+        <form action="./inscription.php" method="POST">
             <input type="submit" value="S'inscrire" class="secondary-btn">
         </form> 
     </div>

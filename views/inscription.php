@@ -9,10 +9,10 @@
     <form action="./../controllers/inscription_controller.php" method="POST">
 
         <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required><br><br>
+        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required><br><br>
 
         <label for="prenom">Prenom :</label>
-        <input type="text" id="prenom" name="prenom" required><br><br>
+        <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required><br><br>
 
         <label for="metier">Métier :</label>
         <select name="metier" id="metier">
@@ -23,10 +23,10 @@
         </select>
 
         <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required><br><br>
 
         <label for="mdp">Mot de passe :</label>
-        <input type="mdp" id="mdp" name="mdp" required><br><br>
+        <input type="mdp" id="mdp" name="mdp" placeholder="Entrez votre mot de passe" required><br><br>
 
         <input type="submit" value="S'inscrire">
 
