@@ -1,0 +1,76 @@
+# Fichiers de dépendances
+/vendor/
+/node_modules/
+/composer.phar
+composer.lock
+
+# Fichiers de configuration sensibles
+.env
+.env.local
+.env.*.local
+config.php
+database.php
+*.config.php
+
+# Fichiers de cache
+/cache/
+/tmp/
+/temp/
+*.cache
+*.tmp
+
+# Fichiers de logs
+/logs/
+*.log
+error_log
+access_log
+
+# Fichiers de session
+/sessions/
+*.sess
+
+# Fichiers uploadés (si nécessaire)
+/uploads/
+/storage/
+
+# Fichiers IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*.old
+*.orig
+
+# Fichiers de test
+/phpunit.xml
+/phpunit.xml.dist
+/.phpunit.result.cache
+/tests/_output/
+
+# Fichiers de build
+/build/
+/dist/
+
+# Fichiers système
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Fichiers de documentation générés
+/docs/build/
+
+# Fichiers de couverture de code
+/coverage/
+.phpunit.result.cache
+
