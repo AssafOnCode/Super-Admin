@@ -35,7 +35,6 @@
                     <option value="developpeur">Développeur</option>
                     <option value="designer">Designer</option>
                     <option value="marketeur">Marketeur</option>
-                    <option value="boss">Boss</option>
                 </select>
             </div>
 

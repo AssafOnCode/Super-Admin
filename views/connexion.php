@@ -15,7 +15,7 @@
         </div>
 
         <!-- Formulaire de connexion -->
-        <form action="./../controllers/index_controller.php" method="POST" class="forms">
+        <form action="./../controllers/connexion_controller.php" method="POST" class="forms">
             <h1>CONNEXION</h1>
             
             <div class="form-group">
