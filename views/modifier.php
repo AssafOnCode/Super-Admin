@@ -1,11 +1,23 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
+    <title>Modifier</title>
     <link rel="stylesheet" href="./../css/inscription.css">
 </head>
+<?php
+session_start();
+$pseudo = $_SESSION['pseudo'];
+$avatar = $_SESSION['avatar'];
+$nom = $_SESSION['nom'];
+$prenom = $_SESSION['prenom'];
+$email = $_SESSION['email'];
+$metier = $_SESSION['metier'];
+$id = $_SESSION['id'];
+?>
 <body>
 
     <div class="container">
@@ -16,16 +28,16 @@
 
         <!-- Formulaire d'inscription -->
         <form action="./../controllers/inscription_controller.php" method="POST" class="forms">
-            <h1>INSCRIPTION</h1>
+            <h1>modifier</h1>
             
             <div class="form-group">
                 <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom"value="<?php echo htmlspecialchars($nom); ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
+                <input type="text" id="prenom" name="prenom" value="<?php echo htmlspecialchars($prenom); ?>" required>
             </div>
 
             <div class="form-group">
@@ -40,7 +52,7 @@
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" required>
             </div>
 
             <div class="form-group">
@@ -49,7 +61,7 @@
             </div>
 
 
-            <input type="submit" value="S'inscrire">
+            <input type="submit" value="enregistrer">
         </form>
 
         <!-- Bouton connexion -->

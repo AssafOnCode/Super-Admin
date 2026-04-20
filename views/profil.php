@@ -25,18 +25,13 @@ $id = $_SESSION['id'];
             <img src="./../assets/superadmin.png" height="50px" width="50px" alt="Logo">
         </div>
     </a>
-    
-    <nav class="nav-menu">
-        <a href="profil.php" class="nav-item">Profil</a>
-    </nav>
-
-    <a href="./profil.php">
-        <div class="user-profile">
-            <span><p><?php echo $_SESSION['pseudo']; ?></p></span>
-            <img src="/PROJECT/SuperAdmin/<?= $_SESSION['avatar'] ?>" height="50px" width="50px" alt="Avatar"> 
-        </div>
-    </a>
 </div>
-    
+
+
+<a href="supprimer.php" class="nav-item"> Supprimer </a>
+<a href="modifier.php" class="nav-item"> Modifier </a>
+<a href="deconnecter.php" class="nav-item"> Se deconnecter </a>
+
+
 </body>
 </html>
