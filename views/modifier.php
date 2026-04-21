@@ -11,12 +11,11 @@
 <?php
 session_start();
 $pseudo = $_SESSION['pseudo'];
-$avatar = $_SESSION['avatar'];
 $nom = $_SESSION['nom'];
 $prenom = $_SESSION['prenom'];
 $email = $_SESSION['email'];
-$metier = $_SESSION['metier'];
-$id = $_SESSION['id'];
+
+
 ?>
 <body>
 
@@ -27,7 +26,7 @@ $id = $_SESSION['id'];
         </div>
 
         <!-- Formulaire d'inscription -->
-        <form action="./../controllers/inscription_controller.php" method="POST" class="forms">
+        <form action="./../controllers/modifier_controller.php" method="POST" class="forms">
             <h1>modifier</h1>
             
             <div class="form-group">
@@ -57,7 +56,7 @@ $id = $_SESSION['id'];
 
             <div class="form-group">
                 <label for="mdp">Mot de passe</label>
-                <input type="password" id="mdp" name="mdp" placeholder="Entrez votre mot de passe" required>
+                <input type="password" id="mdp" name="mdp" placeholder=" Entrez votre mot de passe " required>
             </div>
 
 
