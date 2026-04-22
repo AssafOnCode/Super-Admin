@@ -9,7 +9,7 @@ $metier = $_POST['metier'];
 $email = $_POST['email'];
 $mdp = $_POST['mdp'];
 
-if ($metier == 'developer') {
+if ($metier == 'developpeur') {
     $avatar = '/assets/dev.png';
 } elseif ($metier == 'designer') {
     $avatar = '/assets/design.png';

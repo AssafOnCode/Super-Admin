@@ -42,10 +42,9 @@ $email = $_SESSION['email'];
             <div class="form-group">
                 <label for="metier">Métier</label>
                 <select name="metier" id="metier" required>
-                    <option value="">Sélectionnez votre métier</option>
-                    <option value="developpeur">Développeur</option>
-                    <option value="designer">Designer</option>
-                    <option value="marketeur">Marketeur</option>
+                  <option value="developpeur" <?= $metier == 'developpeur' ? 'selected' : '' ?>>Développeur</option>
+                  <option value="designer" <?= $metier == 'designer' ? 'selected' : '' ?>>Designer</option>
+                  <option value="marketeur" <?= $metier == 'marketeur' ? 'selected' : '' ?>>Marketeur</option>
                 </select>
             </div>
 
