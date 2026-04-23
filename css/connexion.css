@@ -143,3 +143,19 @@ input[type="submit"]:hover {
     flex-direction: column;
     gap: 10px;
 }
+
+.logout-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 320px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: rgba(30, 10, 50, 0.95);
+    border: 1px solid rgba(177, 138, 255, 0.45);
+    box-shadow: 0 0 16px rgba(177, 138, 255, 0.35);
+    color: #f0e8ff;
+    font-size: 14px;
+    text-align: left;
+    z-index: 1000;
+}

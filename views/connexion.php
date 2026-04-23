@@ -9,12 +9,11 @@
 <body>
 
     <div class="container">
-        <!-- Logo -->
+      
         <div class="logo">
             <img src="./../assets/superadmin.png" alt="Logo" />
         </div>
 
-        <!-- Formulaire de connexion -->
         <form action="./../controllers/connexion_controller.php" method="POST" class="forms">
             <h1>CONNEXION</h1>
             
@@ -31,11 +30,15 @@
             <input type="submit" value="Se connecter">
         </form>
 
-        <!-- Bouton inscription -->
+       
         <form action="./inscription.php" method="POST">
             <input type="submit" value="S'inscrire" class="secondary-btn">
         </form> 
     </div>
-
+<?php
+    if (isset($_GET['deconnexion'])) {
+    echo "Vous avez été déconnecté avec succès";
+}
+?>
 </body>
 </html>

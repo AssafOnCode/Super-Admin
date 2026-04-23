@@ -30,7 +30,7 @@ $id = $_SESSION['id'];
 
 <a href="supprimer.php" class="nav-item"> Supprimer </a>
 <a href="modifier.php" class="nav-item"> Modifier </a>
-<a href="deconnecter.php" class="nav-item"> Se déconnecter </a>
+<a href="deconnexion.php" class="nav-item"> Se déconnecter </a>
 
 
 </body>

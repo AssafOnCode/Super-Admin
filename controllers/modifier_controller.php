@@ -18,13 +18,34 @@ if ($metier == 'developpeur') {
 }
 
 $bdd = new PDO('mysql:host=localhost;dbname=php_superadmin', 'root', 'root');
-$requete = $bdd->prepare("SELECT * FROM users WHERE email = :email");
-$requete->execute(['email' => $email]);
+$requete = $bdd->prepare("SELECT * FROM users WHERE email = :email AND id != :id");
+$requete->execute(['email' => $email,'id' => $id]);
 $res = $requete->fetch();
 
 if (! isset($res['email'])) {
-    $requeteverif = $bdd->prepare("UPDATE users SET nom='$nom' , prenom ='$prenom' ,metier='$metier' ,email='$email' ,mdp='$mdp', avatar = '$avatar' WHERE id = :id ");
-    $requeteverif->execute(['id' => $id]);
+    $requeteverif = $bdd->prepare
+("
+    UPDATE users 
+    SET nom = :nom,
+        prenom = :prenom,
+        metier = :metier,
+        email = :email,
+        mdp = :mdp,
+        avatar = :avatar
+    WHERE id = :id
+");
+
+$requeteverif->execute
+
+([
+    'nom' => $nom,
+    'prenom' => $prenom,
+    'metier' => $metier,
+    'email' => $email,
+    'mdp' => $mdp,
+    'avatar' => $avatar,
+    'id' => $id
+]);
     echo "Modification réussie !";
 } else {
     echo "Cet email est déjà utilisé.";
