@@ -14,6 +14,7 @@ $pseudo = $_SESSION['pseudo'];
 $nom = $_SESSION['nom'];
 $prenom = $_SESSION['prenom'];
 $email = $_SESSION['email'];
+$metier = $_SESSION['metier'];
 
 
 ?>
