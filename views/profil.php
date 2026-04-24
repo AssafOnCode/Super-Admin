@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./../css/home.css">
+    <title>Profil</title>
+    <link rel="stylesheet" href="../css/profil.css">
 </head>
-<body>
+<body class="profil-page">
     
     <?php
 session_start();
@@ -22,15 +22,17 @@ $id = $_SESSION['id'];
 <div class="header">
     <a href="home.php">
         <div class="logo">
-            <img src="./../assets/superadmin.png" height="50px" width="50px" alt="Logo">
+            <img src="../assets/superadmin.png" height="50px" width="50px" alt="Logo">
         </div>
     </a>
 </div>
 
 
-<a href="supprimer.php" class="nav-item"> Supprimer </a>
-<a href="modifier.php" class="nav-item"> Modifier </a>
-<a href="deconnexion.php" class="nav-item"> Se déconnecter </a>
+<main class="center-links">
+    <a href="supprimer.php" class="nav-item">Supprimer</a>
+    <a href="modifier.php" class="nav-item">Modifier</a>
+    <a href="deconnexion.php" class="nav-item">Se déconnecter</a>
+</main>
 
 
 </body>

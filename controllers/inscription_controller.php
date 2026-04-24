@@ -37,4 +37,11 @@ if (! isset($res['email'])) {
     echo "Cet email est déjà utilisé.";
 }
 
+if (isset($_GET['succes'])) {
+    echo " Vous avez été supprimé avec succès ! ";
+}
+
 ?>
+
+
+  

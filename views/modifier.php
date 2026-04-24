@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifier</title>
-    <link rel="stylesheet" href="./../css/inscription.css">
+    <link rel="stylesheet" href="./../css/modifier.css">
 </head>
 <?php
 session_start();
@@ -20,6 +20,19 @@ $metier = $_SESSION['metier'];
 ?>
 <body>
 
+    <header class="header">
+        <a href="home.php" class="logo-nav">
+            <img src="./../assets/superadmin.png" height="50" width="50" alt="Logo">
+        </a>
+
+        <nav class="nav-menu">
+            <a href="profil.php" class="nav-item">Profil</a>
+            <a href="supprimer.php" class="nav-item">Supprimer</a>
+            <a href="deconnexion.php" class="nav-item">Se déconnecter</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
     <div class="container">
         <!-- Logo -->
         <div class="logo">
@@ -68,6 +81,7 @@ $metier = $_SESSION['metier'];
             <input type="submit" value="Se connecter" class="secondary-btn">
         </form> 
     </div>
+    </main>
 
 </body>
 </html>
