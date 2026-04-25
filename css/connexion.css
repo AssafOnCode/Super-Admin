@@ -144,18 +144,66 @@ input[type="submit"]:hover {
     gap: 10px;
 }
 
-.logout-message {
+/* Toast déconnexion — uniquement si .deconnexion-flash est présent (connexion.php) */
+.deconnexion-flash {
     position: fixed;
     top: 20px;
     right: 20px;
-    max-width: 320px;
-    padding: 12px 16px;
-    border-radius: 12px;
-    background: rgba(30, 10, 50, 0.95);
-    border: 1px solid rgba(177, 138, 255, 0.45);
-    box-shadow: 0 0 16px rgba(177, 138, 255, 0.35);
-    color: #f0e8ff;
-    font-size: 14px;
-    text-align: left;
-    z-index: 1000;
+    left: auto;
+    bottom: auto;
+    z-index: 9999;
+    width: max-content;
+    max-width: min(340px, calc(100vw - 40px));
+    margin: 0;
+    padding: 13px 20px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.45;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(55, 28, 88, 0.98), rgba(28, 12, 48, 0.98));
+    border: 1px solid rgba(200, 170, 255, 0.55);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+        0 4px 24px rgba(0, 0, 0, 0.35),
+        0 0 40px rgba(140, 110, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -webkit-font-smoothing: antialiased;
+    transform: translateZ(0);
+    animation: deconnexionFlashIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes deconnexionFlashIn {
+    from {
+        opacity: 0;
+        transform: translate3d(16px, -6px, 0) scale(0.94);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .deconnexion-flash {
+        top: 14px;
+        right: 14px;
+        left: 14px;
+        width: auto;
+        max-width: none;
+    }
+
+    @keyframes deconnexionFlashIn {
+        from {
+            opacity: 0;
+            transform: translate3d(0, -12px, 0) scale(0.96);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+    }
 }

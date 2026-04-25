@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="./../css/connexion.css">
 </head>
 <body>
+<?php
+if (isset($_GET['deconnexion'])) {
+    echo '<p class="deconnexion-flash" role="status">Vous avez été déconnecté avec succès</p>';
+}
+?>
 
     <div class="container">
       
@@ -35,10 +40,5 @@
             <input type="submit" value="S'inscrire" class="secondary-btn">
         </form> 
     </div>
-<?php
-    if (isset($_GET['deconnexion'])) {
-    echo "Vous avez été déconnecté avec succès";
-}
-?>
 </body>
 </html>
