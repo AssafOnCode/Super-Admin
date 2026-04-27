@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developpeur - Mes projets</title>
+    <title>Marketeur - Mes projets</title>
     <link rel="stylesheet" href="./../css/home.css">
 </head>
 <body>
@@ -19,7 +19,7 @@ session_start();
     </a>
 
     <nav class="nav-menu">
-        <span class="nav-item">Developpeur - Mes projets</span>
+        <span class="nav-item">Marketeur - Mes projets</span>
     </nav>
 
     <a href="profil.php">

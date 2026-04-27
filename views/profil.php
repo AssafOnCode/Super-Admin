@@ -38,8 +38,8 @@ $id = $_SESSION['id'];
     <a href="designer.php" class="nav-item">Mes projets</a>
     <?php } elseif ($metier == 'developpeur') { ?>
     <a href="developpeur.php" class="nav-item">Mes projets</a>
-    <?php } elseif ($metier == 'marketteur') { ?>
-    <a href="marketteur.php" class="nav-item">Mes projets</a>
+    <?php } elseif ($metier == 'marketeur') { ?>
+    <a href="marketeur.php" class="nav-item">Mes projets</a>
     <?php } else { ?>
     <a href="home.php" class="nav-item">Retour à la page d'accueil</a>
     <?php } ?>
