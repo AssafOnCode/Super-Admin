@@ -1,3 +1,4 @@
+/* Après suppression, redirection vers inscription.php?succes=1 : toast = classe .deconnexion-flash (défini dans css/flash-toast.css, importé par inscription.css) */
 * {
     margin: 0;
     padding: 0;

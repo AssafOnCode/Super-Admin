@@ -32,6 +32,17 @@ $id = $_SESSION['id'];
     <a href="supprimer.php" class="nav-item">Supprimer</a>
     <a href="modifier.php" class="nav-item">Modifier</a>
     <a href="deconnexion.php" class="nav-item">Se déconnecter</a>
+    <?php if ($metier == 'admin') { ?>
+    <a href="admin.php" class="nav-item">Tableau de bord</a>
+    <?php } elseif ($metier == 'designer') { ?>
+    <a href="designer.php" class="nav-item">Mes projets</a>
+    <?php } elseif ($metier == 'developpeur') { ?>
+    <a href="developpeur.php" class="nav-item">Mes projets</a>
+    <?php } elseif ($metier == 'marketteur') { ?>
+    <a href="marketteur.php" class="nav-item">Mes projets</a>
+    <?php } else { ?>
+    <a href="home.php" class="nav-item">Retour à la page d'accueil</a>
+    <?php } ?>
 </main>
 
 

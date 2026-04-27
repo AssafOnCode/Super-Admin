@@ -1,4 +1,5 @@
 <?php
+
 $mdp = $_POST['mdp'];
 $email = $_POST['email'];
 
@@ -7,7 +8,8 @@ $requete = $bdd->prepare("SELECT * FROM users WHERE email = :email AND mdp = :md
 $requete->execute(['email' => $email, 'mdp' => $mdp]);
 $res = $requete->fetch();
 
-if (isset($res['email']) && isset($res['mdp'])) {
+if (isset($res['email']) && isset($res['mdp'])) 
+{
     echo "Connected successfully to the connexion controller.";
     session_start();
     $_SESSION['pseudo'] = $res['prenom'];
@@ -17,10 +19,13 @@ if (isset($res['email']) && isset($res['mdp'])) {
     $_SESSION['avatar'] = $res['avatar'];
     $_SESSION['nom'] = $res['nom'];
     $_SESSION['prenom'] = $res['prenom'];
+
+
     header('Location: ./../views/home.php');
 } else {
     echo "Email or password is incorrect.";
 }
+
 ?>
 
 

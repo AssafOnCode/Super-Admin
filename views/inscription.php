@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="./../css/inscription.css">
 </head>
 <body>
+<?php
+if (isset($_GET['succes'])) {
+    echo '<p class="deconnexion-flash" role="status">Votre compte a été supprimé avec succès.</p>';
+}
+?>
 
     <div class="container">
         <!-- Logo -->

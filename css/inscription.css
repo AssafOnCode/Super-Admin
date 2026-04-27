@@ -1,3 +1,5 @@
+@import url("flash-toast.css");
+
 /* Reset minimal */
 * {
     margin: 0;
@@ -180,4 +182,3 @@ input[type="submit"]:hover {
     flex-direction: column;
     gap: 10px;
 }
-
