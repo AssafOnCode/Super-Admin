@@ -67,7 +67,7 @@ body::after {
 }
 
 .logo img {
-    border-radius: 50%;
+    border-radius: 10px;
     border: 2px solid #67acff;
     box-shadow: 0 0 12px rgba(103, 172, 255, 0.35);
 }

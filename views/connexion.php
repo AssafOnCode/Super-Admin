@@ -9,7 +9,6 @@
 <body>
 <?php
 if (isset($_GET['deconnexion'])) {
-    echo '<p class="deconnexion-flash" role="status">Vous avez été déconnecté avec succès</p>';
 }
 ?>
 

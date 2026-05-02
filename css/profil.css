@@ -34,7 +34,12 @@ body {
     z-index: 1000;
 }
 
-/* Logo */
+/* Logo — même rendu que home.css */
+.header > a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -46,7 +51,7 @@ body {
 }
 
 .logo img {
-    border-radius: 50%;
+    border-radius: 10px;
     border: 2px solid #b18aff;
     box-shadow: 0 0 10px #b18aff33;
     transition: box-shadow 0.3s ease;

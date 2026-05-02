@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
-    <link rel="stylesheet" href="../css/profil.css">
+    <link rel="stylesheet" href="./../css/profil.css">
 </head>
 <body class="profil-page">
     
@@ -22,7 +22,7 @@ $id = $_SESSION['id'];
 <div class="header">
     <a href="home.php">
         <div class="logo">
-            <img src="../assets/superadmin.png" height="50px" width="50px" alt="Logo">
+            <img src="./../assets/superadmin.png" height="50px" width="50px" alt="Logo">
         </div>
     </a>
 </div>
