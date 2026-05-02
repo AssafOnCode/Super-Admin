@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designer - Mes projets</title>
-    <link rel="stylesheet" href="./../css/home.css">
+    <link rel="stylesheet" href="./../css/designer.css">
 </head>
 <body>
 <?php
@@ -19,7 +19,7 @@ session_start();
     </a>
 
     <nav class="nav-menu">
-        <span class="nav-item">Designer - Mes projets</span>
+        <span class="nav-item">DESIGN - MES PROJETS</span>
     </nav>
 
     <a href="profil.php">

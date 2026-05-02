@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Mes projets</title>
-    <link rel="stylesheet" href="./../css/home.css">
+    <link rel="stylesheet" href="./../css/admin.css">
 </head>
 <body>
 <?php
@@ -14,12 +14,12 @@ session_start();
 <div class="header">
     <a href="home.php">
         <div class="logo">
-            <img src="./../assets/superadmin.png" height="50" width="50" alt="Logo">
+            <img src="./../assets/superadminor.png" height="50" width="50" alt="Logo">
         </div>
     </a>
 
     <nav class="nav-menu">
-        <span class="nav-item">Admin - Mes projets</span>
+        <span class="nav-item">ADMIN - TABLEAU DE BORD</span>
     </nav>
 
     <a href="profil.php">
