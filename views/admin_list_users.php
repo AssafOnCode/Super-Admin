@@ -61,6 +61,7 @@ $users = $requete->fetchAll();
             <td><?php echo htmlspecialchars((string) $user['prenom'], ENT_QUOTES, 'UTF-8'); ?></td>
             <td><?php echo htmlspecialchars((string) $user['metier'], ENT_QUOTES, 'UTF-8'); ?></td>
             <td><?php echo htmlspecialchars((string) $user['email'], ENT_QUOTES, 'UTF-8'); ?></td>
+            <?php if ($user['id'] != $_SESSION['id']) { ?>
             <td><a href="./../controllers/admin_profilsupprimer_controller.php?id=<?php echo (int) $user['id']; ?>">Supprimer</a></td>
             
             
