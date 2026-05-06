@@ -27,9 +27,11 @@ $users = $requete->fetchAll();
         </div>
     </a>
 
-    <nav class="nav-menu">
+    <nav class="nav-menu" aria-label="Navigation administration">
         <a href="admin.php" class="nav-item">Tableau de bord</a>
-        <span class="nav-item">LISTE UTILISATEURS</span>
+        <a href="admin_list_users.php" class="nav-item nav-item--active" aria-current="page">Utilisateurs</a>
+        <a href="admin_projects.php" class="nav-item">Projets</a>
+        <a href="admin_actualites.php" class="nav-item">Actualités</a>
     </nav>
 
     <a href="profil.php">
@@ -49,7 +51,6 @@ $users = $requete->fetchAll();
             <th>Métier</th>
             <th>Email</th>
             <th>Supprimer</th>
-            <th>Modifier</th>
         </tr>
     </thead>
     <tbody>
@@ -60,8 +61,9 @@ $users = $requete->fetchAll();
             <td><?php echo htmlspecialchars((string) $user['prenom'], ENT_QUOTES, 'UTF-8'); ?></td>
             <td><?php echo htmlspecialchars((string) $user['metier'], ENT_QUOTES, 'UTF-8'); ?></td>
             <td><?php echo htmlspecialchars((string) $user['email'], ENT_QUOTES, 'UTF-8'); ?></td>
-            <td><button type="button">Supprimer</button></td>
-            <td><button type="button">Modifier</button></td>
+            <td><a href="./../controllers/admin_profilsupprimer_controller.php?id=<?php echo (int) $user['id']; ?>">Supprimer</a></td>
+            
+            
         </tr>
         <?php } ?>
     </tbody>

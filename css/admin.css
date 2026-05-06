@@ -103,6 +103,29 @@ a.nav-item {
     text-decoration: none;
 }
 
+a.nav-item:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(240, 224, 186, 0.88));
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.65),
+        0 4px 14px rgba(108, 89, 52, 0.18);
+}
+
+.nav-item--active,
+span.nav-item.nav-item--active {
+    cursor: default;
+    color: #2f2614;
+    background: linear-gradient(180deg, rgba(255, 248, 228, 0.98), rgba(232, 199, 120, 0.82), rgba(212, 175, 95, 0.62));
+    border-color: rgba(123, 95, 38, 0.65);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+        0 6px 18px rgba(108, 89, 52, 0.22);
+}
+
+a.nav-item.nav-item--active:hover {
+    transform: none;
+    background: linear-gradient(180deg, rgba(255, 248, 228, 0.98), rgba(232, 199, 120, 0.82), rgba(212, 175, 95, 0.62));
+}
+
 .user-profile {
     display: flex;
     align-items: center;
@@ -226,7 +249,9 @@ body table tbody tr:last-child td {
 }
 
 body table tbody td:nth-child(6) button,
-body table tbody td:nth-child(7) button {
+body table tbody td:nth-child(6) a,
+body table tbody td:nth-child(7) button,
+body table tbody td:nth-child(7) a {
     font-family: inherit;
     font-size: 0.78rem;
     font-weight: 600;
@@ -236,36 +261,47 @@ body table tbody td:nth-child(7) button {
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 body table tbody td:nth-child(6) button:hover,
-body table tbody td:nth-child(7) button:hover {
+body table tbody td:nth-child(6) a:hover,
+body table tbody td:nth-child(7) button:hover,
+body table tbody td:nth-child(7) a:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(108, 89, 52, 0.2);
 }
 
 body table tbody td:nth-child(6) button:active,
-body table tbody td:nth-child(7) button:active {
+body table tbody td:nth-child(6) a:active,
+body table tbody td:nth-child(7) button:active,
+body table tbody td:nth-child(7) a:active {
     transform: translateY(0);
 }
 
-body table tbody td:nth-child(6) button {
+body table tbody td:nth-child(6) button,
+body table tbody td:nth-child(6) a {
     color: #7a1f1f;
     background: linear-gradient(180deg, rgba(255, 230, 230, 0.95), rgba(255, 200, 200, 0.75));
     border-color: rgba(200, 100, 100, 0.45);
 }
 
-body table tbody td:nth-child(6) button:hover {
+body table tbody td:nth-child(6) button:hover,
+body table tbody td:nth-child(6) a:hover {
     background: linear-gradient(180deg, #ffe0e0, #ffcccc);
 }
 
-body table tbody td:nth-child(7) button {
+body table tbody td:nth-child(7) button,
+body table tbody td:nth-child(7) a {
     color: #3a3018;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(236, 228, 210, 0.85));
     border-color: rgba(184, 148, 69, 0.42);
 }
 
-body table tbody td:nth-child(7) button:hover {
+body table tbody td:nth-child(7) button:hover,
+body table tbody td:nth-child(7) a:hover {
     background: linear-gradient(180deg, #fffefb, rgba(232, 210, 160, 0.35));
 }
 
@@ -362,7 +398,9 @@ body table tbody td:nth-child(7) button:hover {
     }
 
     body table tbody td:nth-child(6) button,
-    body table tbody td:nth-child(7) button {
+    body table tbody td:nth-child(6) a,
+    body table tbody td:nth-child(7) button,
+    body table tbody td:nth-child(7) a {
         justify-self: start;
     }
 
