@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <?php
+<?php
 session_start();
 $pseudo = $_SESSION['pseudo'];
 $avatar = $_SESSION['avatar'];
