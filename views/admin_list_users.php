@@ -30,7 +30,7 @@ $users = $requete->fetchAll();
     <nav class="nav-menu" aria-label="Navigation administration">
         <a href="admin.php" class="nav-item">Tableau de bord</a>
         <a href="admin_list_users.php" class="nav-item nav-item--active" aria-current="page">Utilisateurs</a>
-        <a href="admin_projects.php" class="nav-item">Projets</a>
+        <a href="admin_projects.php" class="nav-item">Projects</a>
         <a href="admin_actualites.php" class="nav-item">Actualités</a>
     </nav>
 
@@ -61,12 +61,14 @@ $users = $requete->fetchAll();
             <td><?php echo htmlspecialchars((string) $user['prenom'], ENT_QUOTES, 'UTF-8'); ?></td>
             <td><?php echo htmlspecialchars((string) $user['metier'], ENT_QUOTES, 'UTF-8'); ?></td>
             <td><?php echo htmlspecialchars((string) $user['email'], ENT_QUOTES, 'UTF-8'); ?></td>
-            <?php if ($user['id'] != $_SESSION['id']) { ?>
-            <td><a href="./../controllers/admin_profilsupprimer_controller.php?id=<?php echo (int) $user['id']; ?>">Supprimer</a></td>
-            
-            
+            <td>
+            <?php if ($user['metier'] != "Admin") { ?>
+            <a href="./../controllers/admin_profilsupprimer_controller.php?id=<?php echo (int) $user['id']; ?>">Supprimer</a>
+            <?php } ?>
+            </td>
         </tr>
-        <?php } ?>
+        <?php 
+        } ?>
     </tbody>
 </table>
 

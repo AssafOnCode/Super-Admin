@@ -40,5 +40,13 @@ session_start();
 <main class="admin-dashboard-main">
 </main>
 
+<form action="./../controllers/admin_actualites_controller.php" method="POST" enctype="multipart/form-data">
+    <input type="text" name="titre" placeholder="Titre">
+    <input type="text" name="contenu" placeholder="écrivez votre actualité">
+    <label for="image">Image (JPG, PNG, GIF, WebP)</label>
+    <input type="file" name="image" id="image" accept="image/jpeg,image/png,image/gif,image/webp,.jpg,.jpeg,.png,.gif,.webp">
+    <input type="submit" value="Publier">
+</form>
+
 </body>
 </html>

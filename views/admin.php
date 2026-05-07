@@ -38,7 +38,7 @@ session_start();
     <a href="admin_list_users.php" class="btn-users-list">Voir liste utilisateurs</a>
     <br>
     <br>
-    <a href="admin_projects.php" class="btn-users-list">PROJETS</a>
+    <a href="admin_projects.php" class="btn-users-list">PROJECTS</a>
     <br>
     <br>
     <a href="admin_actualites.php" class="btn-users-list">ACTUALITÉS</a>

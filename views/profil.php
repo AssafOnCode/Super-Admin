@@ -32,7 +32,7 @@ $id = $_SESSION['id'];
     <a href="supprimer.php" class="nav-item">Supprimer</a>
     <a href="modifier.php" class="nav-item">Modifier</a>
     <a href="deconnexion.php" class="nav-item">Se déconnecter</a>
-    <?php if ($metier == 'admin') { ?>
+    <?php if ($metier == 'Admin') { ?>
     <a href="admin.php" class="nav-item">Tableau de bord</a>
     <?php } elseif ($metier == 'designer') { ?>
     <a href="designer.php" class="nav-item">Mes projets</a>

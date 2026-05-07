@@ -25,14 +25,14 @@ session_start();
     <nav class="nav-menu" aria-label="Navigation administration">
         <a href="admin.php" class="nav-item">Tableau de bord</a>
         <a href="admin_list_users.php" class="nav-item">Utilisateurs</a>
-        <a href="admin_projects.php" class="nav-item nav-item--active" aria-current="page">Projets</a>
+        <a href="admin_projects.php" class="nav-item nav-item--active" aria-current="page">Projects</a>
         <a href="admin_actualites.php" class="nav-item">Actualités</a>
     </nav>
 
     <a href="profil.php">
         <div class="user-profile">
             <span><p><?php echo $_SESSION['pseudo']; ?></p></span>
-            <img src="/PROJECT/SuperAdmin/<?= $_SESSION['avatar'] ?>" height="50" width="50" alt="Avatar">
+            <img src="/PROJECT/SuperAdmin/<?= $_SESSION['avatar']?>" height="50" width="50" alt="Avatar">
         </div>
     </a>
 </div>
