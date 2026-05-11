@@ -18,15 +18,17 @@ $bdd = new PDO('mysql:host=localhost;dbname=php_superadmin', 'root', 'root');
 
 $requetedev = $bdd->prepare("SELECT * FROM users where metier = 'developpeur'");
 $requetedev->execute();
-$dev = $requetedev->fetchAll();
+$devs = $requetedev->fetchAll();
 
 $requetemkt = $bdd->prepare("SELECT * FROM users where metier = 'marketeur'");
 $requetemkt->execute();
-$mkt = $requetemkt->fetchAll();
+$mkts = $requetemkt->fetchAll();
 
 $requetedsg = $bdd->prepare("SELECT * FROM users where metier = 'designer'");
 $requetedsg->execute();
-$dsg = $requetedsg->fetchAll();
+$dsgs = $requetedsg->fetchAll();
+
+
 
 ?>
 
@@ -54,7 +56,7 @@ $dsg = $requetedsg->fetchAll();
 
 <main class="admin-dashboard-main admin-dashboard-main--projects">
     <div class="projects-page">
-        <header class="projects-page__header">
+        <header class="projects-page__header projects-page__header--hero">
             <p class="projects-page__eyebrow">Administration</p>
             <h1 class="projects-page__title">Nouveau projet</h1>
             <p class="projects-page__intro">Renseignez le projet et assignez l’équipe. Listes multiples : <kbd>Cmd</kbd> (Mac) ou <kbd>Ctrl</kbd> (Windows) + clic.</p>
@@ -64,34 +66,35 @@ $dsg = $requetedsg->fetchAll();
             <div class="projects-page__basics">
                 <input type="text" name="nom" placeholder="Nom du projet" autocomplete="off">
                 <input type="text" name="temps" placeholder="Temps de réalisation" autocomplete="off">
-                <input type="text" name="description" placeholder="Description" autocomplete="off">
+                <input type="text" name="descriptions" placeholder="Descriptions" autocomplete="off">
             </div>
 
             <section class="projects-page__team" aria-label="Membres du projet">
                 <p class="projects-page__team-title">Équipe</p>
                 <h2 class="projects-page__team-heading">Rôles et participants</h2>
                 <div class="projects-page__team-grid">
-                    <div class="projects-field projects-field--dev">
+                    
+                <div class="projects-field projects-field--dev">
                         <label class="projects-field__label" for="sel-dev">Développeur</label>
                         <select id="sel-dev" name="developpeur[]" multiple class="projects-select" size="6">
-                            <?php foreach ($dev as $devs) { ?>
-                                <option value="<?=$devs['id']?>"><?=$devs['nom']?>, <?=$devs['prenom']?>, <?=$devs['metier']?></option>
+                            <?php foreach ($devs as $dev) { ?>
+                                <option value="<?=$dev['id']?>"><?=$dev['nom']?>, <?=$dev['prenom']?>, <?=$dev['metier']?></option>
                             <?php } ?>
                         </select>
                     </div>
                     <div class="projects-field projects-field--mkt">
                         <label class="projects-field__label" for="sel-mkt">Marketeur</label>
                         <select id="sel-mkt" name="marketeur[]" multiple class="projects-select" size="6">
-                            <?php foreach ($mkt as $mkts) { ?>
-                                <option value="<?=$mkts['id']?>"><?=$mkts['nom']?>, <?=$mkts['prenom']?>, <?=$mkts['metier']?></option>
+                            <?php foreach ($mkts as $mkt) { ?>
+                                <option value="<?=$mkt['id']?>"><?=$mkt['nom']?>, <?=$mkt['prenom']?>, <?=$mkt['metier']?></option>
                             <?php } ?>
                         </select>
                     </div>
                     <div class="projects-field projects-field--dsg">
                         <label class="projects-field__label" for="sel-dsg">Designer</label>
                         <select id="sel-dsg" name="designer[]" multiple class="projects-select" size="6">
-                            <?php foreach ($dsg as $dsgs) { ?>
-                                <option value="<?=$dsgs['id']?>"><?=$dsgs['nom']?>, <?=$dsgs['prenom']?>, <?=$dsgs['metier']?></option>
+                            <?php foreach ($dsgs as $dsg) { ?>
+                                <option value="<?=$dsg['id']?>"><?=$dsg['nom']?>, <?=$dsg['prenom']?>, <?=$dsg['metier']?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -104,6 +107,10 @@ $dsg = $requetedsg->fetchAll();
         </form>
     </div>
 </main>
+
+<?php foreach ($projets as $projet) { ?>
+<option value="<?=$projet['id']?>"><?=$projet['nom']?>, <?=$projet['temps']?>, <?=$projet['descriptions']?></option>
+<?php } ?>
 
 </body>
 </html>
