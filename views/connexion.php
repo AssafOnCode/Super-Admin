@@ -9,6 +9,7 @@
 <body>
 <?php
 if (isset($_GET['deconnexion'])) {
+    echo 'vous etes deconnectée';
 }
 ?>
 
